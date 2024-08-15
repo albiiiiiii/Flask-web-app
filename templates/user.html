@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}
+Welcome
+{% endblock %}
+
+{% block content %}
+    {%with messages=get_flashed_messages()%}
+        {%if messages%}
+            {%for msg in messages%}
+                <p>{{msg}}</p>
+            {%endfor%}
+        {%endif%}
+    {%endwith%}
+<h1>Welcome {{fn}}</h1><br>
+<!--<h2>My Notes:</h2><br>
+<form action="#" method="post">
+    <textarea name="notename" id='notename' placeholder="Note name:" class="form-control" style="width:500px;"></textarea><br><br>
+    <textarea name="note" id="note" placeholder="Enter notes:" class="form-control" style="width:1000px; height:200px;"></textarea><br><br>
+    <button type="submit" class="btn btn-primary">Save note</button>
+</form>-->
+{% endblock %}

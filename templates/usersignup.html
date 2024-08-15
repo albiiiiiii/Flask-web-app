@@ -1,0 +1,23 @@
+{%extends "base.html"%}
+{%block title%}Admin login{%endblock%}
+
+{%block content%}
+    {%with messages=get_flashed_messages()%}
+        {%if messages%}
+            {%for msg in messages%}
+                <p>{{msg}}</p>
+            {%endfor%}
+        {%endif%}
+    {%endwith%}
+    
+<h1>User Signup</h1>
+<form action="#" method="post">
+    <p>Email:</p>
+    <p><input type="email" name="email"></p>
+    <p>First Name:</p>
+    <p><input type='text' name="firstname"></p>
+    <p>Password:</p>
+    <p><input type='text' name="pw"></p>
+    <p><input type="submit" value='Submit'></p>
+</form>
+{%endblock%}
